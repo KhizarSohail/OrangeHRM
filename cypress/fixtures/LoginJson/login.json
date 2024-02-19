@@ -1,0 +1,8 @@
+{
+    "valid_username": "Admin",
+    "valid_password": "admin123",
+    "valid_assert": "Dashboard",
+    "invalid_username":"Invalid credentials",
+    "invalid_password": "admin123",
+    "error_message": "Dashboard"
+}

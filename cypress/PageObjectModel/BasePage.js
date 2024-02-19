@@ -1,6 +1,9 @@
 class BasePage
 {
 
+    Wait_for(sec){
+        cy.wait(sec)
+    }
     Visit(){
         cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
         cy.viewport(1920,1080)
