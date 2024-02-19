@@ -1,5 +1,6 @@
-{
-  "username": "Admin",
-  "password": "Admin",
-  "body": "Fixtures are a great way to mock data for responses to routes"
-}
+[ {
+    "username": "Admin",
+    "password": "Admin",
+    "valid_assert": "Dashboard"
+  }
+]
