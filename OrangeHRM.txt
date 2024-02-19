@@ -1,0 +1,43 @@
+							ORANGE HRM 
+============================================================================================================================  
+DATE : 19/2 - 21/2 [MONDAY - WEDNESDAY]
+============================================================================================================================
+	> Login [Hamza]
+		> Dashboard 
+  [HAMZA]  Day 1  > ADMIN > Add User 
+				> User Role 				
+				> Emp name 
+				> Status
+				> username 
+				> password
+				> confirm password > SAVE*
+
+  [KHIZAR] Day 1-2 > PIM 	
+			> Employee full name 
+			> Middle Name 
+			> Last name 
+			> employee id
+				> Create Login Details 
+					> Username 
+					> Status 
+					> Password
+					> Confirm Password > SAVE* 
+ 			> Add Report
+				> Report Name*
+				> Selection Criteria
+				> Include 
+				> Display field group
+				> Display field >>>>>>>> SAVE*
+
+			> Employee SEARCH
+				> Name
+				> ID
+				> Status
+				> include
+				> supervisor 
+				> Job title 
+				> Sub unit > SEARCH*
+
+============================================================================================================================  
+
+============================================================================================================================
