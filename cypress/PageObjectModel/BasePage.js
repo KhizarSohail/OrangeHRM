@@ -9,7 +9,7 @@ class BasePage
         cy.viewport(1920,1080)
     }
 
-    Verify(option, loc, ev){
+    Verify(option, loc, expected){
         option.toLowerCase()
         try {
            switch (option) {
@@ -17,17 +17,17 @@ class BasePage
                 cy.get(':radio').should('be.checked')
                 break;
             case 'have.length' :
-                cy.get(loc).should('have.length', ev)
+                cy.get(loc).should('have.length', expected)
                 break;
             case 'include.text':
-                cy.get(loc).should('include.text',ev)
+                cy.get(loc).should('include.text',expected)
                 break;            
             case 'href':
                 cy.location().should((loc) => {
-                    expect(loc.href).to.eq(`${ev}`)})
+                    expect(loc.href).to.eq(`${expected}`)})
                 break;
             default:
-                cy.get(loc).should('have.text',ev)    
+                cy.get(loc).should('have.text',expected)    
                 break;
            }
         } catch (error) {
