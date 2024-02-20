@@ -1,0 +1,20 @@
+{
+    "Locators": {
+        "menuBtn_Locator":":nth-child(2) > .oxd-main-menu-item > .oxd-text",
+        "AddBtn_Locator":".orangehrm-header-container > .oxd-button",
+        "PageTitle_Locator":".oxd-topbar-header-breadcrumb > .oxd-text",
+        "FirstName_Locator":".--name-grouped-field > :nth-child(1) > :nth-child(2) > .oxd-input",
+        "MiddleName_Locator":":nth-child(2) > :nth-child(2) > .oxd-input",
+        "LastName_Locator":":nth-child(3) > :nth-child(2) > .oxd-input",
+        "EmpID_Locator":".oxd-grid-item > .oxd-input-group > :nth-child(2) > .oxd-input"
+    },
+    "Data":{
+        "expectedTitle" : "PIM",
+        "Firstname_Data":"Saad",
+        "Middlename_Data":"Ahmed",
+        "Lastname_Data":"Chushtti",
+        "EmpID_Data":"789"
+        
+
+    }   
+}

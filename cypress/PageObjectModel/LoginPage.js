@@ -1,32 +1,29 @@
 import BasePage from "./BasePage";
 
+    const bs = new BasePage();  
+    const login = '../fixtures/LoginJson/login.json' 
+
 class LoginPage{
     
-    bs = new BasePage();
-
-    userLoc = ':nth-child(2) > .oxd-input-group > :nth-child(2) > .oxd-input'
-    passLoc = ':nth-child(3) > .oxd-input-group > :nth-child(2) > .oxd-input'
-    submitLoc = '.oxd-button'
-    assert_loc_text = '.oxd-topbar-header-breadcrumb > .oxd-text'
-    login = '../fixtures/LoginJson/login.json' 
-    single = '../fixtures/LoginJson/Single.json'
     
     Login_With_Valid_User()
     {
-        cy.fixture(this.login).then(val => {
-            this.bs.Action('type',this.userLoc,val.valid_username)
-            this.bs.Action('type',this.passLoc,val.valid_password)
-            this.bs.Action('click',this.submitLoc)
-            this.bs.Verify('have.text',this.assert_loc_text,val.valid_assert)
+        cy.fixture(login).then(val => {
+            bs.Action('type', val.Locators.userLocator, val.Valid_Data.valid_username)
+            bs.Action('type', val.Locators.passLocator, val.Valid_Data.valid_password)
+            bs.Action('click', val.Locators.submitLocator)
+            bs.Wait_for(2000)
+            bs.Verify('have.text', val.Locators.valid_assert_loc, val.Valid_Data.valid_assert)
         })
     }
 
     Login_With_Invalid_User()
     {
-        cy.fixture(this.single).then(data => {
-            cy.get(this.userLoc).type(data.username)
-            cy.get(this.passLoc).type(data.password)
-            cy.get(this.submitLoc).click()
+        cy.fixture(login).then(data => {
+            bs.Action('write', data.Locators.userLocator, data.Invalid_Data.invalid_username)
+            bs.Action('write', data.Locators.passLocator, data.Invalid_Data.invalid_password)
+            bs.Action('click', data.Locators.submitLocator)
+            bs.Verify('have.text', data.Locators.errorLocator, data.Invalid_Data.invalid_error_message)
         })
     }
 

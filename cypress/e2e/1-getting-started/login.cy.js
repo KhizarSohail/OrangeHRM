@@ -15,6 +15,7 @@ it('Verify Valid Login', () => {
 });
 
 it('Verify InValid Login', () => {
+    bs.Wait_for(5000)
     ln.Login_With_Invalid_User()
 });
 

@@ -1,8 +1,20 @@
 {
-    "valid_username": "Admin",
-    "valid_password": "admin123",
-    "valid_assert": "Dashboard",
-    "invalid_username":"Invalid credentials",
-    "invalid_password": "admin123",
-    "error_message": "Dashboard"
+    "Locators" : {
+        "userLocator":":nth-child(2) > .oxd-input-group > :nth-child(2) > .oxd-input",
+        "passLocator":":nth-child(3) > .oxd-input-group > :nth-child(2) > .oxd-input",
+        "submitLocator":".oxd-button",
+        "valid_assert_loc":".oxd-topbar-header-breadcrumb > .oxd-text",
+        "errorLocator":".oxd-alert-content > .oxd-text"
+    },
+    "Valid_Data" : {
+        "valid_username": "Admin",
+        "valid_password": "admin123",
+        "valid_assert": "Dashboard"
+    },
+    "Invalid_Data" : {
+        "invalid_username":"Invalid credentials",
+        "invalid_password": "admin123",
+        "invalid_error_message": "Invalid credentials"
+    } 
+    
 }
