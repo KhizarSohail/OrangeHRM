@@ -16,6 +16,6 @@ describe('PIM Page Test Suite', () => {
     it('Clicks on the Side Menu', () => {
         ln.Login_With_Valid_User()
         bs.Wait_for(2000)
-        pim.Add_Employee()
+        pim.Create_PIM_User()
     });
 })

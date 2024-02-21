@@ -57,6 +57,14 @@ class BasePage
                     console.log(error, "Please give value 'click' to perform click")
                     }
             }
+            else if(option == 'check'){
+                try{                
+                    cy.get(loc).check()
+                }
+                catch(error){
+                    console.log(error, "Please give value 'click' to perform click")
+                    }
+            }
         } catch(error){
             console.log(error ,'Please enter "write" or "click" to perfom the action')
         }
