@@ -18,7 +18,7 @@ class PimPage{
             bs.Action('write', fetch.Locators.Password_Locator, fetch.Data.password_Data)
             bs.Action('write', fetch.Locators.Confirm_Password_locator, fetch.Data.Confirmpass_Data)
             bs.Action('click', fetch.Locators.SaveBtn)
-        })
+        }) 
     }
 
     Add_Employee(){
