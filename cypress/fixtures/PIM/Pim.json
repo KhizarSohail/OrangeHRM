@@ -6,14 +6,22 @@
         "FirstName_Locator":".--name-grouped-field > :nth-child(1) > :nth-child(2) > .oxd-input",
         "MiddleName_Locator":":nth-child(2) > :nth-child(2) > .oxd-input",
         "LastName_Locator":":nth-child(3) > :nth-child(2) > .oxd-input",
-        "EmpID_Locator":".oxd-grid-item > .oxd-input-group > :nth-child(2) > .oxd-input"
+        "EmpID_Locator":".oxd-grid-item > .oxd-input-group > :nth-child(2) > .oxd-input",
+        "Login_Radio_Locator":"#app > div.oxd-layout > div.oxd-layout-container > div.oxd-layout-context > div > div > form > div.orangehrm-employee-container > div.orangehrm-employee-form > div.oxd-form-row.user-form-header > div > label > span",
+        "Username_Locator":"#app > div.oxd-layout > div.oxd-layout-container > div.oxd-layout-context > div > div > form > div.orangehrm-employee-container > div.orangehrm-employee-form > div:nth-child(4) > div > div:nth-child(1) > div > div:nth-child(2) > input",
+        "Password_Locator":"#app > div.oxd-layout > div.oxd-layout-container > div.oxd-layout-context > div > div > form > div.orangehrm-employee-container > div.orangehrm-employee-form > div.oxd-form-row.user-password-row > div > div.oxd-grid-item.oxd-grid-item--gutters.user-password-cell > div > div:nth-child(2) > input",
+        "Confirm_Password_locator":"#app > div.oxd-layout > div.oxd-layout-container > div.oxd-layout-context > div > div > form > div.orangehrm-employee-container > div.orangehrm-employee-form > div.oxd-form-row.user-password-row > div > div:nth-child(2) > div > div:nth-child(2) > input",
+        "SaveBtn":"#app > div.oxd-layout > div.oxd-layout-container > div.oxd-layout-context > div > div > form > div.oxd-form-actions > button.oxd-button.oxd-button--medium.oxd-button--secondary.orangehrm-left-space"
     },
     "Data":{
         "expectedTitle" : "PIM",
         "Firstname_Data":"Saad",
         "Middlename_Data":"Ahmed",
         "Lastname_Data":"Chushtti",
-        "EmpID_Data":"789"
+        "EmpID_Data":"7899",
+        "username_Data":"CoffeeTester",
+        "password_Data":"CoffeeTester_123",
+        "Confirmpass_Data":"CoffeeTester_123"
         
 
     }   
