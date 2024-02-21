@@ -1,0 +1,11 @@
+{
+    "Locators": {
+        
+        "EditBtn_Loc"  : "#app > div.oxd-layout > div.oxd-layout-container > div.oxd-layout-context > div > div.orangehrm-paper-container > div.orangehrm-container > div > div.oxd-table-body > div > div > div:nth-child(6) > div > button:nth-child(2) > i",
+        "Username_Loc" : "#app > div.oxd-layout > div.oxd-layout-container > div.oxd-layout-context > div > div > form > div.oxd-form-row > div > div:nth-child(4) > div > div:nth-child(2) > input",
+        "SaveBtn_Loc" : ".oxd-button--secondary"
+    },
+    "Data":{
+        "EditUsername_Data" : "Joseph12"
+    }   
+}

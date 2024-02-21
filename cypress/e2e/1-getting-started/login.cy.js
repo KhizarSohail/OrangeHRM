@@ -5,7 +5,7 @@ describe('Login : Test Suite', ()=> {
 
     const bs = new BasePage
     const ln = new LoginPage
-    const admin = new AdminPage
+    const Admn = new AdminPage
 
 beforeEach(() => {
     bs.Visit()
@@ -14,11 +14,11 @@ beforeEach(() => {
 it.only('Verify Valid Login', () => {
     bs.Wait_for(5000)
     ln.Login_With_Valid_User()
-    admin.Admin_Add_User();
 
 });
 
 it('Verify InValid Login', () => {
+    bs.Wait_for(5000)
     ln.Login_With_Invalid_User()
 });
 

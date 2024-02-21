@@ -1,3 +1,4 @@
+///<reference types="cypress" />
 class BasePage
 {
 
@@ -55,6 +56,14 @@ class BasePage
                 }
                 catch(error){
                     console.log(error, "Please give value 'click' to perform click")
+                    }
+            } 
+            else if(option == 'clear'){
+                try{                
+                    cy.get(loc).clear();
+                }
+                catch(error){
+                    console.log(error, "Please give value 'clear' to perform click")
                     }
             }
         } catch(error){

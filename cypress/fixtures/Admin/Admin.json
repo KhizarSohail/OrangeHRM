@@ -1,0 +1,22 @@
+{
+    "Locators": {
+        "menuBtn_Loc" : ".oxd-sidepanel-body > ul > li:nth-child(1) > a > span",
+        "AdminTitle_Loc" : ".oxd-topbar-header > div.oxd-topbar-header-title > span > h6",
+        "AddUserBtn_Loc" : ".orangehrm-paper-container > div.orangehrm-header-container > button",
+        "User_Role_Loc" :  ":nth-child(1) > div > div:nth-child(2) > div > div > div.oxd-select-text-input",
+        "Emp_Name_Loc" : ":nth-child(1) > div > div:nth-child(2) > div > div:nth-child(2) > div > div > input",
+        
+        "Status_Loc" : ":nth-child(3) > .oxd-input-group > :nth-child(2) > .oxd-select-wrapper > .oxd-select-text > .oxd-select-text-input",
+        "Username_Loc" : ":nth-child(1) > div > div:nth-child(4) > div > div:nth-child(2) > input",
+        "Password_Loc" : ".oxd-grid-item.oxd-grid-item--gutters.user-password-cell > div > div:nth-child(2) > input",
+        "ConfirmPass_Loc" : ":nth-child(2) > div > div:nth-child(2) > input",
+        "SaveBtn_Loc" : ".oxd-button--secondary"
+    },
+    "Data":{
+        "expectedTitle" : "Admin",
+        "EmployeName_Data": "Luis  Suarez",
+        "Username_Data":"Karter",
+        "Password_Data":"Hamza_123",
+        "ConfirmPass_Data":"Hamza_123"
+    }   
+}

@@ -1,51 +1,71 @@
 import BasePage from "./BasePage";
 
+ const bs = new BasePage;
+ const admin = "../fixtures/Admin/Admin.json"
+ const search = "../fixtures/Admin/Search.json"
+ const edit = "../fixtures/Admin/Edit.json";
+ const Delete = "../fixtures/Admin/Delete.json";
 
-class AdminPage
+ class AdminPage
 {
-    bs = new BasePage();
- 
-    admin_tab = '.oxd-sidepanel-body > ul > li:nth-child(1) > a > span';
-    adduserBtn = '.orangehrm-paper-container > div.orangehrm-header-container > button';
-    admin = '../fixtures/Adminjson/admin.json';
-    User_Role =  ':nth-child(1) > div > div:nth-child(2) > div > div > div.oxd-select-text-input';
-    Emp_name = ':nth-child(1) > div > div:nth-child(2) > div > div:nth-child(2) > div > div > input';
-    status = ':nth-child(3) > div > div:nth-child(2) > div > div > div.oxd-select-text-input';
-    username = ':nth-child(1) > div > div:nth-child(4) > div > div:nth-child(2) > input';
-    password = '.oxd-grid-item.oxd-grid-item--gutters.user-password-cell > div > div:nth-child(2) > input';
-    confrmPass = ':nth-child(2) > div > div:nth-child(2) > input';
-    Save_button = '.oxd-button--secondary';
     
     Admin_Add_User()
     {
-        this.bs.Action("click",this.admin_tab);
-        this.bs.Action("click",this.adduserBtn);
-        cy.fixture(this.admin).then((val) =>
+        cy.fixture(admin).then((fetch) =>
         {
-            //admin side menu
-            this.bs.Action("click",this.admin_tab);
-            //add user button
-            this.bs.Action("click",this.adduserBtn);         
+            bs.Action("click",fetch.Locators.menuBtn_Loc);
+            bs.Action("click",fetch.Locators.AddUserBtn_Loc);
+
+            bs.Verify("have.text", fetch.Locators.AdminTitle_Loc, fetch.Data.expectedTitle)
             //user role
-            this.bs.Action("type",this.User_Role,"{downArrow}")
-            this.bs.Action("click",this.User_Role); 
+            bs.Action("type", fetch.Locators.User_Role_Loc,"{downArrow}{downArrow}")
+            bs.Action("type", fetch.Locators.User_Role_Loc,"{enter}"); 
             //emp role
-            this.bs.Action("type",this.Emp_name,"Rahul")
-            this.bs.Wait_for(3000);
-            this.bs.Action("type",this.Emp_name,"{downArrow}");
-            this.bs.Wait_for(3000);
-            this.bs.Action("type",this.Emp_name,"{enter}"); 
+            bs.Action("type", fetch.Locators.Emp_Name_Loc,fetch.Data.EmployeName_Data)
+            bs.Wait_for(2000);
+            bs.Action("type", fetch.Locators.Emp_Name_Loc,"{downArrow}");
+            bs.Wait_for(2000);
+            bs.Action("type", fetch.Locators.Emp_Name_Loc,"{enter}"); 
             //status
-            this.bs.Action("type",this.status,'{downArrow}')
-            this.bs.Action("click",this.status);
+            bs.Action("type", fetch.Locators.Status_Loc,"{downArrow}");
+            bs.Wait_for(2000)
+            bs.Action("type", fetch.Locators.Status_Loc,"{enter}");
             //username, pass, confirm pass
-            this.bs.Action("type",this.username,"Hamza");
-            this.bs.Action("type",this.password,"Ali1234");
-            this.bs.Action("type",this.confrmPass,"Ali1234");
+           bs.Action("type", fetch.Locators.Username_Loc, fetch.Data.Username_Data);
+            bs.Action("type", fetch.Locators.Password_Loc, fetch.Data.Password_Data);
+            bs.Action("type", fetch.Locators.ConfirmPass_Loc, fetch.Data.ConfirmPass_Data);
             //save button
-            this.bs.Action("click",this.Save_button);
+            bs.Action("click", fetch.Locators.SaveBtn_Loc);
+ 
         })
-        
+    }
+    Search_User(userforSearch)
+    {
+        cy.fixture(search).then((fetch) => 
+        {
+            bs.Action("type", fetch.Locators.Search_User_Loc, userforSearch);
+            bs.Action("click", fetch.Locators.SearchBtn_Loc);  
+        })
+    }
+    Edit_User()
+    {
+        cy.fixture(edit).then((fetch) => {
+            bs.Action("click", fetch.Locators.EditBtn_Loc);  
+             
+            bs.Action("clear", fetch.Locators.Username_Loc); 
+            
+            bs.Action("type", fetch.Locators.Username_Loc,fetch.Data.EditUsername_Data);
+
+            bs.Action("click",fetch.Locators.SaveBtn_Loc)
+        })
+    }
+    
+    DeleteUser()
+    {   
+        cy.fixture(Delete).then((fetch) => {
+            bs.Action("click",fetch.Locators.DeleteBtn_Loc);
+            bs.Action("click",fetch.Locators.DeleteBtn_Cnfrm_Loc);
+        } )
     }
 }
 export default AdminPage;
