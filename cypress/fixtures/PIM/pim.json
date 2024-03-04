@@ -1,0 +1,26 @@
+{
+    "Locators": {
+        "menuBtn_Locator":":nth-child(2) > .oxd-main-menu-item > .oxd-text",
+        "AddBtn_Locator":".orangehrm-header-container > .oxd-button",
+        "PageTitle_Locator":".oxd-topbar-header-breadcrumb > .oxd-text",
+        "FirstName_Locator":".--name-grouped-field > :nth-child(1) > :nth-child(2) > .oxd-input",
+        "MiddleName_Locator":":nth-child(2) > :nth-child(2) > .oxd-input",
+        "LastName_Locator":":nth-child(3) > :nth-child(2) > .oxd-input",
+        "EmpID_Locator":".oxd-grid-item > .oxd-input-group > :nth-child(2) > .oxd-input",
+        "Login_Radio_Locator":".oxd-switch-input",
+        "Username_Locator":":nth-child(4) > .oxd-grid-2 > :nth-child(1) > .oxd-input-group > :nth-child(2) > .oxd-input",
+        "Password_Locator":".user-password-cell > .oxd-input-group > :nth-child(2) > .oxd-input",
+        "Confirm_Password_locator":".oxd-grid-2 > :nth-child(2) > .oxd-input-group > :nth-child(2) > .oxd-input",
+        "SaveBtn":".oxd-button--secondary"
+    },
+    "Data":{
+        "expectedTitle" : "PIM",
+        "Firstname_Data":"Saad",
+        "Middlename_Data":"Ahmed",
+        "Lastname_Data":"Chushtti",
+        "EmpID_Data":"7899",
+        "username_Data":"CoffeeTester",
+        "password_Data":"CoffeeTester_123",
+        "Confirmpass_Data":"CoffeeTester_123"
+    }   
+}
